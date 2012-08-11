@@ -5,12 +5,12 @@ module EventSpitter
   def on(event_name, handler)
     events[event_name] = Array(events[event_name]) << handler
   end
-  alias :add_listener :on
+  alias_method :add_listener, :on
 
   def off(event_name, handler)
     Array(events[event_name]).delete(handler)
   end
-  alias :remove_listener :off
+  alias_method :remove_listener, :off
 
   def once(event_name, handler)
     new_handler = ->(*args) do
