@@ -1,6 +1,6 @@
 # EventSpitter
 
-TODO: Write a gem description
+Like Nodejs' EventEmitter but in Ruby.
 
 ## Installation
 
