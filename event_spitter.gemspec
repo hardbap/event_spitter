@@ -4,8 +4,8 @@ require File.expand_path('../lib/event_spitter/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["'Mike Breen'"]
   gem.email         = ["hardbap@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{An EventEmitter library for Ruby}
+  gem.summary       = %q{}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
