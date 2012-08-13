@@ -1,3 +1,3 @@
 module EventSpitter
-  VERSION = "1.0.0"
+  VERSION = "0.5.0"
 end
