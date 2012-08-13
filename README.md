@@ -18,7 +18,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    # include EventSpitter in your class.
+    class Something
+      include EventSpitter
+    end
+
+    something = Something.new
+
+    # Then add a listener
+    listener = ->(msg) { puts('msg') }
+    something.on('greeting', listener)
+
+    # Trigger the event
+    something.emit('greeting', 'hello world')
+    # => "hello world"
+
+    # Add a listener that will fire one time only
+    one_timer = ->(msg) { puts(msg + ' once') }
+    something.once('greeting', one_timer)
+
+    something.emit('greeting', 'hello world')
+    # => "hello world"
+    # => "hello world once"
+
+    something.emit('greeting', 'hello world')
+    # => "hello world"
+
+    # Remove a listener
+    # something.off('greeting', listener)
 
 ## Contributing
 
